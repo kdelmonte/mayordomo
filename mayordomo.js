@@ -396,13 +396,13 @@
     // 2. `events` is a string that contains one or more event names separated by spaces.
     // 3. `events` is an array containing full event objects.
     // 4. `events` is an array of strings that contains the event names.
-    mayordomo.off = function (events, handler, data, permanent, passcode) {
+    mayordomo.off = function (events, handler, data, passcode) {
       var eventList = decodeEvents(events);
 
       // If multiple events were passed, use recursion to finish task
       if (eventList.length > 1) {
         _.each(eventList, function (event) {
-          mayordomo.off(event, handler, data, permanent, passcode);
+          mayordomo.off(event, handler, data, passcode);
         });
 
         // Exit after recursion
@@ -413,7 +413,7 @@
       var event = eventList[0];
 
       // Build event object
-      event = constructEvent(event, handler, data, undefined, permanent, passcode);
+      event = constructEvent(event, handler, data, undefined, false, passcode);
 
       // If we made it to here, we are dealing with one event spec object with a single target name or no target name at all
       var toRemove;
