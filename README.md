@@ -1,4 +1,4 @@
-# mayordomo [![Build Status](https://travis-ci.org/kdelmonte/mayordomo.svg)](https://travis-ci.org/kdelmonte/mayordomo)
+# mayordomo [![Build Status](https://travis-ci.org/kdelmonte/mayordomo.svg?branch=master)](https://travis-ci.org/kdelmonte/mayordomo)
 
 mayordomo is a feature-rich JavaScript event manager that supports event handler protection, namespaces and TTL.
 
