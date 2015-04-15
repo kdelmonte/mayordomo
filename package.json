@@ -4,7 +4,7 @@
   "description": "Feature-rich JavaScript event manager that supports event handler protection, namespaces and TTL",
   "main": "mayordomo.js",
   "scripts": {
-    "test": "mocha"
+    "test": "make test"
   },
   "repository": {
     "type": "git",
@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "docco": "^0.7.0",
+    "mocha": "^2.2.4",
     "should": "^5.2.0"
   }
 }
